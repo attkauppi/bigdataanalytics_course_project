@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+    <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8 blog-main">
+        <h3 class="pb-3 mb-4 font-italic border-bottom">
+          From the Firehose
+        </h3>
+
+        <div class="blog-post">
+            <h2 class="blog-post-title">Helsingin Airbnb-markkinat</h2>
+
+            <p>
+                On varsin tyypillistä, että korkeammalla vierasmäärällä voi saavuttaa keskimäärin korkeamman hinnan Airbnb:ssä. Seuraavassa kuviossa onkin havainnollistettu Airbnb-asuntojen mediaanihintoja eri vierasmäärillä. Tätä tulkitessa kannnattaa kuitenkin ottaa huomioon, että aineistoni jäi ainakin toistaiseksi varsin pieneksi, joten kovin pitkällä meneviä johtopäätöksiä ei kannata tämän pohjalta vielä tehdä.
+            </p>
+            <div>
+                <figure class="figure">
+                    <img src="http://0.0.0.0:5000/plots/helsinki/median_price_guest_number" class='img-fluid' alt="Yöpymisen mediaanihinnat vierasmäärän suhteessa"/>
+                    <figcaption class="figure-caption">Median price of Airbnbs accomodating different number of guests in Helsinki.</figcaption>
+                </figure>
+            </div>
+
+
+            <p>
+                Olen havainnollistanut Helsingin Airbnb-markkinoita myös karttojen muodossa, jotka lötyvät alta. 
+            </p>
+
+            <div>
+                <h4>Airbnb-asuntojen määrät Helsingin eri kaupunginosissa</h4>
+                <iframe src="{{ url_for('map') }}" width="600" height="600"></iframe>
+            </div>
+
+            <div>
+            <h4>Airbnb-asuntojen mediaanihinnat Helsingin eri kaupunginosissa</h2> 
+                <iframe src="{{ url_for('map_median_price') }}" width=600 height=600></iframe>
+            </div>
+            <p>
+                Airbnb-asiakkaat tuntuvat edelleen arvostelevan matkakokemuksiaan yms. sillä ajatuksella, että yöpyessään yksityishenkilön kodissa, ei voi odottaa kaikkia niitä mukavuuksia kuin esimerkiksi hotellissa. Näin ainakin itse tulkitsen sitä, että asiakkaat tuntuvat antavan lähes yksinomaan korkeahkoja arvosanoja Airbnb-yöpymisistään. 
+            </p>
+            <p>
+                Seuraavassa esimerkiksi näkyy, miten asiakkaiden antamat arviot jakautuvat aineistossa usealla eri mittarilla. 
+            </p>
+            <div>
+                <figure class="figure">
+                    <img src="http://0.0.0.0:5000/plots/helsinki/hel_review_scores/" class="img-fluid", alt="Yleisarvostelu asunnosta"/>
+                    <figcaption class="figure-caption">Vieraiden erilaisia arvosteluperusteita Airbnb-asunnoista ja arvosanojen jakautuminen aineistossa</figcaption>
+                </figure>
+            </div>
+
+            <p>
+                Airbnb:n arvostelut ovat hyvin usein arvosteluskaalan yläpääässä, mikä on havaittavissa myös seuraavasta kuviosta, joka kuvaa vieraiden antamaa yleisarvosanaa asunnosta.
+            </p>
+            <!-- <div>
+                <figure class="figure">
+                    <img src="http://127.0.0.1:5000/plots/helsinki/reviews_score_rating/" class='img-fluid' alt="Yleisarvostelu asunnosta"/>
+                    <figcaption class="figure-caption">Yleisarvostelut Helsingin Airbnb-asunnoissa. Y-akseli kuvaa asuntojen lukumäärää</figcaption>
+                </figure>
+            </div> -->
+
+            <!-- <figure class="figure"> -->
+                <!--<img src="http://localhost:5000/plots/manchester/time_since_last_review" class="img-fluid" width=900 height=300/>-->
+                <!-- TOIMIVA <img src="http://localhost:5000/plots/manchester/time_since_last_review" alt=""-->
+            <!-- </figure> -->
+
+
+
+
+
+
+
+
+        </div>
+
+
+    
+{% endblock %}

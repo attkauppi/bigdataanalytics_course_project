@@ -1,0 +1,6 @@
+Aioin kirjoittaa webserverin, joka olisi hakenut tietoja tasaisin väliajoin ja päivittänyt ennustuksia, mutta
+koneeni alkoi elehtiä siihen malliin, että heittänee kohta henkensä. Jouduin näin ollen palauttamaan työni
+tällaisessa vaiheessa kun se on tällä hetkellä. Flask-serverin kautta voi pyytää hintaennustetta Curl-komennolla,
+joka on mainittu Palautettu.ipynb:n lopussa. Käytin hintaennusteiden tekemiseen xgboostia. 
+
+Mukana myös Manchesterista tekemäni vastaavanlainen ennuste.
